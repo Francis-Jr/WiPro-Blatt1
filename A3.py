@@ -12,9 +12,11 @@ C = 5.0 / 9.0 * (F-32)
 print C
 
 agg = "fluessig"
-if C <= 0:
+if C <= 0.:
     agg = "fest"
-if C >= 100:
+elif C >= 100.:
     agg = "gasfoermig"
     
-print agg
+    
+"""ODER analog zu a ? b : c """
+s =  "fest" if C<0. else "gas" if C > 100. else "fluessig"
